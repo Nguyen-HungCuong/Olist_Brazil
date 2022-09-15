@@ -5,6 +5,8 @@ SELECT
   count(distinct order_id) as no_id
 FROM `olist.orders`
 GROUP BY 1 ORDER BY 1
+-- The month with the highest revenue is 11-2017.
+-- Show with plot time series
 
 -- 2. Calculate Average Orders per month
 WITH t1 AS 
@@ -36,4 +38,4 @@ SELECT
 FROM t1
 ORDER BY ADGMV DESC 
 
--- 3. Which state has the highest revenue; which city has the highest revenue
+-- 3. Based on the average monthly sales, we will see which category has the highest average monthly sales?
